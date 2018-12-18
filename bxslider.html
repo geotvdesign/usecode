@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--独自のCSS-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<!--Jquery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!--JS-->
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+	<!--Jquery スイッチ型（ここがスイッチの動き、実際の動作をしている部分）-->
+
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/*slideを利用し枠のサイズを整える*/
+
+		.slide {
+			width: 500px;
+			margin: 0 auto;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<!--新たにslideというクラスで囲む-->
+	<div class="slide">
+		<div class="bxslider">
+			<div>
+				<figure><img src="images/01.jpg" width="500" alt=""></figure>
+			</div>
+			<div>
+				<figure><img src="images/02.jpg" width="500" alt=""></figure>
+			</div>
+			<div>
+				<figure><img src="images/03.jpg" width="500" alt=""></figure>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		//ready(function が入ってる場合は上に書いても動く
+		//		$(document).ready(function() {
+		//			$('.slider').bxSlider();
+		//		});
+		//自動で動くバージョン、一番下に書く
+		$('.bxslider').bxSlider({
+			auto: true,
+			autoControls: true,
+			stopAutoOnClick: true,
+			pager: true,
+			slideWidth: 600,
+			mode: "vertical" //縦にスライドする
+
+		});
+	</script>
+
+</body>
+
+</html>

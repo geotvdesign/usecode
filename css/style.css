@@ -1,0 +1,24 @@
+/*よくつかうCSS*/
+
+
+/*冒頭使用*/
+body {
+    line-height: 1.8;
+    font-size: 90%;
+}
+
+li {
+    list-style: none;
+}
+
+main {
+    width: 1000px;
+    /*上下、左右＝中心に*/
+    margin: 0 auto;
+}
+
+/*overflow 親要素につけることで、その要素内だけ横並びされる*/
+
+.of {
+    overflow: hidden;
+}
